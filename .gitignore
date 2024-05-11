@@ -1,0 +1,5 @@
+# ignore the npm dependanciy
+node_modules/
+
+#ignore my environment variable
+.env
