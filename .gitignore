@@ -3,3 +3,6 @@ node_modules/
 
 #ignore my environment variable
 .env
+
+#ignore sensitive tokens
+nodemon.json
