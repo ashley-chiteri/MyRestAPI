@@ -16,6 +16,7 @@ mongoose.connect('mongodb+srv://shop-node:'+process.env.DB_PASSWRD+'@node-rest-s
 mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
