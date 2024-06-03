@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const mutler = require('multer');
+const multer = require('multer');
 
 //image storage configuration
 const storage = multer.diskStorage({
@@ -24,7 +24,7 @@ const fileFilter = (req, file, cb) => {
     }
 
 }
-const upload = mutler({
+const upload = multer({
     storage: storage,
     limits: {
         fileSize: 1024 * 1024 * 5
@@ -33,7 +33,7 @@ const upload = mutler({
 });
 
 const Product = require('../models/product');
-const multer = require('multer');
+//const multer = require('multer');
 
 router.get('/', (req, res, next) => {
     Product.find().select('name price _id productImage').exec().then(docs => {
